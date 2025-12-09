@@ -1,0 +1,370 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Main Section */
+.deals-section {
+    max-width: 1660px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+/* Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    color: #374151;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    line-height: 37.5px;
+    margin-bottom: 12px;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.nav-btn .arrow {
+    font-size: 24px;
+    color: #6b7280;
+    line-height: 0;
+}
+
+.nav-btn:hover .arrow {
+    color: #374151;
+}
+
+/* Products Carousel */
+.products-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 5px 5px;
+    flex: 1;
+}
+
+.products-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Product Card */
+.product-card {
+    flex: 0 0 auto;
+    width: 135px;
+    background: white;
+}
+
+/* Product Image */
+.product-image {
+    position: relative;
+    background: white;
+    padding: 20px 0 0;
+    margin-bottom: 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Product Info */
+.product-info {
+    padding-top: 12px;
+}
+
+.brand {
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Georgia', serif;
+    color: #666;
+    margin-bottom: 2.4px;
+}
+
+.product-title {
+    margin: 2.4px 0 4px;
+}
+
+.product-title a {
+    color: #374151;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+    line-height: 21px;
+    text-decoration: none;
+    display: block;
+}
+
+.product-title a:hover {
+    color: #4b5563;
+}
+
+/* Rating Section */
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 4px 0;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.star {
+    color: #fbbf24;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.star.half {
+    background: linear-gradient(to right, #fbbf24 50%, #d1d5db 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.star.empty {
+    color: #d1d5db;
+}
+
+.rating-text {
+    color: #374151;
+    font-size: 15px;
+    line-height: 19.5px;
+    padding-top: 2.25px;
+    display: flex;
+    gap: 5px;
+}
+
+/* Price Section */
+.price-section {
+    margin: 4px 0;
+}
+
+.current-price {
+    color: #065f46;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.original-price {
+    font-size: 12.8px;
+    color: #666;
+    line-height: 19.2px;
+    text-decoration: line-through;
+}
+
+.old-price {
+    color: #1f2937;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+/* Quick View Button - Clean centered position */
+.quick-view-btn {
+    display: none;
+    text-decoration: none;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .product-card {
+        width: 227.2px;
+        margin-right: 15px;
+        position: relative;
+        padding-bottom: 8px; /* Space for button */
+    }
+    
+    .product-image {
+        margin-bottom: 12px;
+        height: 285px;
+        padding-top: 0;
+    }
+    
+    /* Centered button positioned in middle section */
+    .quick-view-btn {
+        display: block;
+        position: absolute;
+        top: 285px; /* Right below image */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 32px); /* Slightly inset */
+        background: white;
+        color: #374151;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.2px;
+        text-align: center;
+        padding: 7.6px 16px;
+        border: 2px solid #374151;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+    
+    .quick-view-btn:hover {
+        background: #374151;
+        color: white;
+        border-color: #374151;
+    }
+    
+    /* Move product info down to accommodate button */
+    .product-info {
+        padding-top: 48px; /* Space for the button */
+    }
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .deals-section {
+        padding: 0 12px;
+        margin: 24px auto;
+    }
+    
+    .section-header h2 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    
+    .products-carousel {
+        gap: 15px;
+    }
+    
+    .product-card {
+        width: 150px;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+    
+    .brand {
+        font-size: 13px;
+    }
+    
+    .product-title a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .star {
+        font-size: 18px;
+    }
+    
+    .rating-text {
+        font-size: 14px;
+    }
+    
+    .current-price {
+        font-size: 15px;
+    }
+    
+    .original-price {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-carousel {
+        gap: 12px;
+    }
+    
+    .product-card {
+        width: 140px;
+    }
+    
+    .product-image {
+        height: 160px;
+    }
+    
+    .product-title a {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    
+    .star {
+        font-size: 16px;
+    }
+    
+    .rating-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .product-card {
+        width: 130px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+    
+    .nav-btn {
+        display: none;
+    }
+}
